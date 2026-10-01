@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pulso",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uvicorn", "backend.app:app", "--port", "8765"],
+      "port": 8765
+    },
+    {
+      "name": "pulso-test",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uvicorn", "backend.app:app", "--port", "8766"],
+      "port": 8766
+    }
+  ]
+}

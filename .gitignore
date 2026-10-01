@@ -1,0 +1,32 @@
+# --- Secretos y credenciales (NUNCA subir) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Datos personales: salud y sesión de Garmin ---
+data/
+*.db
+*.sqlite
+*.sqlite3
+garmin_tokens*/
+garmin_tokens*.json
+.garminconnect/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Editores y sistema ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Configuración local de Claude Code ---
+.claude/settings.local.json

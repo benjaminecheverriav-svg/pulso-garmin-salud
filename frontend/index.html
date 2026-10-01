@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulso · Salud y rendimiento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M2 12h4l2.5-6 4 12 3-8 1.5 2H22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Pulso</span>
+    </div>
+    <nav id="nav">
+      <a data-view="hoy" href="#hoy">Hoy</a>
+      <a data-view="entrenador" href="#entrenador">Entrenador</a>
+      <a data-view="salud" href="#salud">Salud</a>
+      <a data-view="sueno" href="#sueno">Sueño</a>
+      <a data-view="recuperacion" href="#recuperacion">Recuperación</a>
+      <a data-view="rendimiento" href="#rendimiento">Rendimiento</a>
+      <a data-view="actividades" href="#actividades">Actividades</a>
+      <a data-view="reloj" href="#reloj">Mi reloj</a>
+      <a data-view="perfil" href="#perfil">Perfil</a>
+    </nav>
+    <div class="sidebar-foot">
+      <div id="device" class="device"></div>
+      <div id="source" class="source"></div>
+      <button id="btn-account" class="link">Cuenta Garmin</button>
+      <button id="btn-theme" class="link">Tema claro</button>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="date-nav">
+        <button id="prev-day" aria-label="Día anterior">‹</button>
+        <input type="date" id="date-pick">
+        <button id="next-day" aria-label="Día siguiente">›</button>
+        <button id="today" class="chip">Hoy</button>
+      </div>
+      <div class="range" id="range" role="group" aria-label="Rango de tendencias">
+        <button data-range="7">7 d</button>
+        <button data-range="30" class="on">30 d</button>
+        <button data-range="90">90 d</button>
+      </div>
+      <button id="btn-sync" class="primary">Sincronizar</button>
+    </header>
+    <div id="sync-bar" class="sync-bar" hidden><div></div><span></span></div>
+    <section id="view"></section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card">
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="/static/app.js"></script>
+  <script src="/static/views_extra.js"></script>
+</body>
+</html>
