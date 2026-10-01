@@ -9,7 +9,7 @@ de riesgo de salud**, explicaciones en lenguaje sencillo y consejos para configu
 ## Cómo se construyó: desarrollo asistido por IA
 
 Este proyecto lo desarrollé con **[Claude Code](https://claude.com/claude-code)** (Anthropic) como
-asistente de programación. Lo publico también como muestra de cómo trabajo con IA.
+asistente de programación.
 
 **Mi parte:** definí el producto y sus prioridades, tomé las decisiones de diseño, probé la app
 con los datos reales de mi reloj y detecté lo que no funcionaba. **La parte de la IA:** implementó
