@@ -1,0 +1,25 @@
+{
+  "name": "pulso-garmin-salud",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Panel local de salud y rendimiento con datos de Garmin: entrenador, indicadores de riesgo y explicaciones en lenguaje sencillo.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -w apps/api && npm run build -w apps/web",
+    "start": "concurrently -n api,web -c blue,green \"npm run start -w apps/api\" \"npm run start -w apps/web\"",
+    "typecheck": "npm run typecheck -w apps/api && npm run typecheck -w apps/web",
+    "check:lines": "node scripts/check-lines.mjs",
+    "check": "npm run typecheck && npm run check:lines"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "typescript": "~6.0.2"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

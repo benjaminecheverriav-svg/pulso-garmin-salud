@@ -14,6 +14,15 @@ garmin_tokens*/
 garmin_tokens*.json
 .garminconnect/
 
+# --- Node / TypeScript ---
+node_modules/
+.next/
+dist/
+out/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+
 # --- Python ---
 __pycache__/
 *.py[cod]
@@ -30,3 +39,7 @@ desktop.ini
 
 # --- Configuración local de Claude Code ---
 .claude/settings.local.json
+node_modules
+
+# Marca de compilación local de iniciar.bat
+.build-version
