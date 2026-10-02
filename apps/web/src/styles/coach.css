@@ -1,0 +1,57 @@
+/* entrenador */
+.teaser { display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; color: inherit; margin-bottom: 4px; border-left: 4px solid var(--accent); }
+.teaser:hover { background: var(--surface-2); }
+.teaser .label, .today-card .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+.teaser-title { font-size: 17px; font-weight: 600; margin: 4px 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.teaser p { margin: 0; color: var(--text-secondary); }
+.teaser .go { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+.today-card { border-left: 4px solid var(--accent); }
+.today-title { font-size: 24px; font-weight: 700; margin: 6px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.today-detail { font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
+.chip-s { font-size: 12px; padding: 4px 10px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-secondary); }
+button.chip-s:hover { color: var(--text-primary); border-color: var(--text-muted); }
+.delta { font-size: 11px; color: var(--text-muted); }
+
+.plan-row { display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.plan-row:last-of-type { border-bottom: 0; }
+.plan-row p { margin: 4px 0 0; color: var(--text-secondary); font-size: 13px; }
+.plan-row.today .plan-day { color: var(--accent); }
+.plan-day { font-weight: 600; }
+
+.score { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; padding: 2px 8px; border-radius: 8px; font-weight: 700; background: var(--surface-2); box-shadow: inset 0 -2px 0 var(--sc, var(--text-muted)); }
+.score.good { --sc: var(--good); }
+.score.warning { --sc: var(--warning); }
+.score.critical { --sc: var(--critical); }
+
+details.eval { grid-column: 2 / -1; margin-top: 4px; }
+details summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
+details summary:hover { color: var(--text-primary); }
+details[open] summary { margin-bottom: 8px; }
+.ev-list { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; font-size: 13px; }
+.ev-list .ok::first-letter { color: var(--good); font-weight: 700; }
+.ev-list .ko::first-letter { color: var(--serious); font-weight: 700; }
+.detail { margin: 10px 0; }
+.detail h3 { font-size: 12px; margin-bottom: 4px; }
+table.laps th, table.laps td { padding: 6px 8px; font-size: 12px; }
+
+/* chat */
+.chat-log { max-height: 460px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+.msg { padding: 10px 14px; border-radius: 12px; max-width: 85%; font-size: 14px; }
+.msg p { margin: 0 0 6px; }
+.msg p:last-child { margin: 0; }
+.msg ul { margin: 4px 0 8px; padding-left: 20px; }
+.msg h4 { margin: 8px 0 4px; font-size: 14px; }
+.msg.user { align-self: flex-end; background: var(--accent); color: #fff; white-space: pre-wrap; }
+.msg.assistant { align-self: flex-start; background: var(--surface-2); }
+.msg.assistant:empty::after { content: "Pensando…"; color: var(--text-muted); }
+.chat-form { display: flex; gap: 8px; margin-top: 12px; }
+.chat-form input { flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-primary); font: inherit; min-width: 0; }
+.fine { font-size: 11px; margin: 8px 0 0; }
+
+@media (max-width: 820px) {
+  .plan-row { grid-template-columns: 1fr; gap: 4px; }
+  .teaser { flex-direction: column; align-items: flex-start; }
+  .msg { max-width: 100%; }
+}

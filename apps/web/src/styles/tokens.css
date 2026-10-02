@@ -1,0 +1,58 @@
+/* Paleta validada para daltonismo (dataviz) en tema oscuro y claro. */
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0c0e;
+  --surface-1: #15171a;
+  --surface-2: #1d2024;
+  --border: #2a2d32;
+  --grid: #25282c;
+  --text-primary: #f4f4f2;
+  --text-secondary: #b9b8b0;
+  --text-muted: #85847d;
+  --accent: #3987e5;
+
+  --series-1: #3987e5; /* azul */
+  --series-2: #d95926; /* naranja */
+  --series-3: #199e70; /* aqua */
+  --series-4: #c98500; /* amarillo */
+  --series-5: #d55181; /* magenta */
+  --series-7: #9085e9; /* violeta */
+
+  --good: #0ca30c;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #d03b3b;
+
+  --stage-deep: #3987e5;
+  --stage-light: #199e70;
+  --stage-rem: #9085e9;
+  --stage-awake: #c98500;
+
+  --z1: #184f95; --z2: #256abf; --z3: #3987e5; --z4: #6da7ec; --z5: #9ec5f4;
+  --ring-track: #26292e;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f3f1;
+  --surface-1: #fcfcfb;
+  --surface-2: #f0efec;
+  --border: #e2e1dc;
+  --grid: #ebeae6;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #7a7973;
+  --accent: #2a78d6;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
+  --series-7: #4a3aa7;
+  --stage-deep: #2a78d6;
+  --stage-light: #1baf7a;
+  --stage-rem: #4a3aa7;
+  --stage-awake: #eda100;
+  --z1: #86b6ef; --z2: #5598e7; --z3: #2a78d6; --z4: #1c5cab; --z5: #104281;
+  --ring-track: #e6e5e0;
+}
