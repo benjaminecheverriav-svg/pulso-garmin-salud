@@ -2,16 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "pulso",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "uvicorn", "backend.app:app", "--port", "8765"],
+      "name": "pulso-api",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["apps/api/dist/main.js"],
       "port": 8765
     },
     {
-      "name": "pulso-test",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "uvicorn", "backend.app:app", "--port", "8766"],
-      "port": 8766
+      "name": "pulso-web",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+      "runtimeArgs": ["run", "dev", "-w", "apps/web"],
+      "port": 3000
     }
   ]
 }

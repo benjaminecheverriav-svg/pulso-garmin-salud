@@ -1,5 +1,0 @@
-garminconnect>=0.3.2
-fastapi>=0.110
-uvicorn[standard]>=0.29
-python-dotenv>=1.0
-anthropic>=1.0
